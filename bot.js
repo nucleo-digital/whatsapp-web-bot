@@ -26,13 +26,13 @@
 		Wife: Yes darling I still do, only difference is earlier it was 300ml now it's 1.5 ltr.`,
 
 		`
-		God created the earth, 
-		God created the woods, 
-		God created you too, 
+		God created the earth,
+		God created the woods,
+		God created you too,
 		But then, even God makes mistakes sometimes!`,
 
 		`
-		What is a difference between a Kiss, a Car and a Monkey? 
+		What is a difference between a Kiss, a Car and a Monkey?
 		A kiss is so dear, a car is too dear and a monkey is U dear.`
 	]
 
@@ -234,10 +234,14 @@
 
 		if (lastMsg.toUpperCase().indexOf('@HELP') > -1){
 			sendText = `
-				Cool ${title}! Some commands that you can send me:
+				Oi ${title}! Eu sou o assistente da Cooperapas para um atendimento mais eficiente. Veja o que voce pode mandar para mim:
 
-				1. *@TIME*
-				2. *@JOKE*`
+	1. *ACEITOPEDIDO*
+	2. *REVISARPEDIDO*
+	3. *PROXIMOPEDIDO*
+	4. *NESSEPEDIDO*
+	
+	Não se esqueça de, ao interagir comigo, colocar um @ antes da palavra, assim: @PALAVRA.`
 		}
 
 		if (lastMsg.toUpperCase().indexOf('@TIME') > -1){
@@ -246,6 +250,30 @@
 
 				*${new Date()}*`
 		}
+		
+		// começo mensagens
+		
+		if (lastMsg.toUpperCase().indexOf('@ACEITOPEDIDO') > -1){
+			sendText = `
+				Ok, obrigado! Envie por favor, os produtos que voce deseja oferecer.`
+		}
+		
+		if (lastMsg.toUpperCase().indexOf('@REVISARPEDIDO') > -1){
+			sendText = `
+				Desculpe! Iremos conferir o seu pedido, mas, já podemos adiantar que devido a diversas circunstancias do campo podem haver imprevistos e alteracoes. O que nao foi atendido neste pedido, poderia ser atendido no proximo?`
+		}
+		
+		if (lastMsg.toUpperCase().indexOf('@PROXIMOPEDIDO') > -1){
+			sendText = `
+				ok, vamos ja conversar com o produtor e se possivel registrar seu novo pedido!`
+		}
+		
+		if (lastMsg.toUpperCase().indexOf('@NESSEPEDIDO') > -1){
+			sendText = `
+				ok! vamos tentar resolver ja! o que houve de errado?`
+		}
+		
+		// fim mensagens
 
 		if (lastMsg.toUpperCase().indexOf('@JOKE') > -1){
 			sendText = jokeList[rand(jokeList.length - 1)];
