@@ -241,12 +241,12 @@
 				Olá! Aqui quem fala é o assistente da COOPERAPAS. Você pode interagir comigo por aqui. Envie *COOPEBOT* para entender como eu posso te ajudar.
 				
 Você é cliente?
-Envie PEDIR para realizar seu pedido.
+Envie *PEDIR* para realizar seu pedido.
 
 É fornecedor?
-Envie RECEBER para receber pedidos de clientes assim que eles chegarem.
+Envie *RECEBER* para receber pedidos de clientes assim que eles chegarem.
 
-        _Não se esqueça de sempre colocar o sinal *@* antes de suas mensagens. Por exemplo: *@resposta*. Assim eu consigo entender e te responder._`
+_Não se esqueça de sempre colocar o sinal *@* antes de suas mensagens. Por exemplo: *@resposta*. Assim eu consigo entender e te responder._`
 		}		
 		
 		// clients
@@ -313,10 +313,8 @@ Estes são os comandos que você pode enviar para mim:
 				
 *VISITA*
 Agende uma visita de um técnico da Prefeitura.
-
 *CURSOS*
 Tem interesse em se desenvolver? Envie para saber dos cursos disponíveis.
-
 *MATERIAIS*
 Está precisando de material para sua plantação? Envie para participar de compras com desconto. 
         
@@ -339,7 +337,6 @@ _Não se esqueça de sempre colocar o sinal *@* antes de suas mensagens. Por exe
 		if (lastMsg.toUpperCase().indexOf('@SEGUNDA') > -1){
 			sendText = `
 				Ok! Entendemos o dia que você prefere. E qual período?
-
         *MANHÃ*
         *TARDE*
         *NOITE*
@@ -350,7 +347,6 @@ _Não se esqueça de sempre colocar o sinal *@* antes de suas mensagens. Por exe
 		if (lastMsg.toUpperCase().indexOf('@QUARTA') > -1){
 	sendText = `
 		Ok! Entendemos o dia que você prefere. E qual período?
-
     *MANHÃ*
     *TARDE*
     *NOITE*
@@ -361,7 +357,6 @@ _Não se esqueça de sempre colocar o sinal *@* antes de suas mensagens. Por exe
 		if (lastMsg.toUpperCase().indexOf('@SEXTA') > -1){
 	sendText = `
 		Ok! Entendemos o dia que você prefere. E qual período?
-
     *MANHÃ*
     *TARDE*
     *NOITE*
